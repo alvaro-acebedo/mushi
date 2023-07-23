@@ -7,3 +7,9 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 # Compile features
 list(APPEND PROJECT_COMPILE_FEATURES cxx_std_17)
+
+# Project version number defined in CMake into C++ headers
+configure_file(
+    "${PROJECT_SOURCE_DIR}/include/${PROJECT_NAME}/Version.h.in"
+    "${PROJECT_BINARY_DIR}/include/${PROJECT_NAME}/Version.h"
+    )
